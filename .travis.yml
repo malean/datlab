@@ -4,6 +4,7 @@ os:
 - linux
 
 before_script:
+- sudo apt-get install python-pip
 - pip3 install pandas
 
 
