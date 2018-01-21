@@ -1,0 +1,9 @@
+language: python
+
+os:
+- linux
+- osx
+
+script:
+- cd test
+- python3 test_kmeans.py
