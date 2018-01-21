@@ -5,9 +5,12 @@ os:
 
 before_script:
 - sudo apt-get install python3-pip
-- pip3 install pandas
+- sudo pip3 install pandas
+- sudo pip3 install numpy
 
 
 script:
 - cd test
 - python3 test_kmeans.py
+
+install: true
