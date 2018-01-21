@@ -3,6 +3,7 @@ import numpy
 import sys
 sys.path.insert(0, "../src")
 
+
 from clustering import kmeans
 
 
@@ -13,12 +14,14 @@ if __name__ == '__main__':
     #labels = data.iloc[:,4].values
     nb_clusters = 3
     seed = 20061982
-    actual = kmeans(examples, nb_clusters, seed)
+    actual = kmeans(examples, nb_clusters)
     expected = numpy.loadtxt('kmeans.txt')
     if numpy.array_equal(actual, expected):
         print('SUCCESS')
+        sys.exit(0)
     else:
         print("FAILED")
+        sys.exit(1)
     #nrow = data.shape[0]
     #ntrain = int(0.7 * nrow)
     #ntest = nrow - ntrain
