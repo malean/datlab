@@ -1,6 +1,8 @@
 import pandas
 import numpy
 import sys
+import ipdb
+ipdb.set_trace()
 sys.path.insert(0, "../src")
 
 
@@ -14,7 +16,8 @@ if __name__ == '__main__':
     #labels = data.iloc[:,4].values
     nb_clusters = 3
     seed = 20061982
-    actual = kmeans(examples, nb_clusters)
+    ipdb.set_trace()
+    actual = kmeans(examples, nb_clusters, seed)
     expected = numpy.loadtxt('kmeans.txt')
     if numpy.array_equal(actual, expected):
         print('SUCCESS')
